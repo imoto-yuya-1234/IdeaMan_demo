@@ -10,12 +10,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val AddListButton: FloatingActionButton? = findViewById(R.id.addbutton)
+        val AddListButton: FloatingActionButton? = findViewById(R.id.fab_add_list)
         AddListButton?.setOnClickListener { displayDialog() }
     }
 
     private fun displayDialog() {
-        val newFlagment = AddListDialog.newInstance()
-        newFlagment.show(fragmentManager, "dialog")
+        AddListDialog.newInstance().show(fragmentManager, "dialog")
     }
 }
